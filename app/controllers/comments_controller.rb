@@ -8,4 +8,13 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:remark)
   end
 
+  def create
+    @comment = Comment.new()
+    if @comment.save
+      redirect_to '/'
+    else
+      render 'new'
+    end
+  end
+
 end
