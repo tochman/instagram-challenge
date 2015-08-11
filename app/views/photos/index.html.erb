@@ -4,6 +4,7 @@
   <% if @photos.any? %>
     <% @photos.all.reverse.each do |photo| %>
       <%= image_tag photo.image.url, {:width => "500", :height => "500"} %><br>
+      <%= new_photo_comment_path %>
       <%= photo.caption %><br><br><br>
     <% end %>
   <% else %>

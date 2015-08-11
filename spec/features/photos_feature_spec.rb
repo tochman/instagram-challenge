@@ -14,18 +14,6 @@ feature 'photos' do
     end
   end
 
-  # context 'photos have been added' do
-  #   before do
-
-  #    end
-
-  #   scenario 'should display caption' do
-  #     visit '/photos'
-  #     expect(page).to have_content('what a picture - what a photograph!')
-  #     expect(page).not_to have_content('No photos yet')
-  #   end
-  # end
-
   context 'creating photos' do
     scenario 'gives user a form to add photo, displays caption' do
       visit '/photos'

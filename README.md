@@ -4,7 +4,7 @@
 
 ![Obama selfie](http://s3.amazonaws.com/digitaltrends-uploads-prod/2015/02/Obama-Selfie-Stick.jpg)
 
-## User stories:
+### User stories:
 
 ```
 As a keen photographer
@@ -24,16 +24,14 @@ So that I can enter into a dialogue with other users of the site
 I want to be able to leave a comment for each photo
 ```
 
-Technologies Used:
--------
+### Technologies Used:
 
 * Ruby On Rails (full-stack web app framework)
 * RSpec/Capybara(full testing suite for RoR applications testing the front and back end)
 
 
 
-Steps taken/to take:
--------
+### Steps taken/to take:
 
 * [x] Create the photos and list them on the page. I will be doing this without images first. It's not unreasonable to expect a photo will need a caption (although not directly specified in the brief, or within my user stories) but it is a handy placeholder for me to then bolt on a photo upload later
 * [x] Add the ability to upload photos by associating them with the new photos model. The challenge will be working out how to test for that
@@ -42,15 +40,14 @@ Steps taken/to take:
 * [ ] Add a like (endorsement) button
 * [ ] Add a comments box
 
-Further steps for the future:
--------
+### Further steps for the future:
+
 * [x] restrict creation to logged-in users only
 * [ ] restrict deletion to the user that uploaded
 * [ ] image resizing on upload
 * [ ] add AJAX to make the magic happen all in one place
 * [ ] add facial recognition which detects a face in an image, crops picture to focus just on the chin and mouth, flips the image vertically and adds eyes; rename project 'chinstagram'
 
-Links:
--------
+### Links:
 
 Challenge issued here: [Github - Makers Academy: Instagram Challenge](https://github.com/makersacademy/instagram-challenge)
