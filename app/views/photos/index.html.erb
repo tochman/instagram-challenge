@@ -4,8 +4,18 @@
   <% if @photos.any? %>
     <% @photos.all.reverse.each do |photo| %>
       <%= image_tag photo.image.url, {:width => "500", :height => "500"} %><br>
-      <%= new_photo_comment_path %>
+      <%= link_to "leave comment", new_photo_comment_path(photo) %><br>
       <%= photo.caption %><br><br><br>
+        <% if photo.comments.any? %>
+          <ul>
+            <% photo.comments.each do |comment| %>
+              <li>
+                <%= comment.remark %><strong>
+              </li>
+            <% end %>
+          </ul>
+        <% else %>
+        <% end %>
     <% end %>
   <% else %>
     no photos!

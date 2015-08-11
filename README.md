@@ -38,7 +38,7 @@ I want to be able to leave a comment for each photo
 * [x] Add logging in feature.
 * [ ] Display username with each photo etc. (NB for the first four user stories, the basic functionality spec provided in the challenge, any associatons re: deleting etc can be added later
 * [ ] Add a like (endorsement) button
-* [ ] Add a comments box
+* [ ] Add a comment facility
 
 ### Further steps for the future:
 
@@ -46,7 +46,7 @@ I want to be able to leave a comment for each photo
 * [ ] restrict deletion to the user that uploaded
 * [ ] image resizing on upload
 * [ ] add AJAX to make the magic happen all in one place
-* [ ] add facial recognition which detects a face in an image, crops picture to focus just on the chin and mouth, flips the image vertically and adds eyes; rename project 'chinstagram'
+* [ ] add facial recognition which detects a face in an image, crops picture to focus just on the chin and mouth, flips the image vertically and adds eyes; rename project 'Chinstagram'
 
 ### Links:
 

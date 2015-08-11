@@ -7,7 +7,7 @@ feature 'commenting' do
 
     visit('/')
     click_link 'leave comment'
-    fill_in "comment", with: "nice pic"
+    fill_in "Leave review", with: "nice pic"
     click_button 'post comment'
 
     expect(current_path).to eq '/'
