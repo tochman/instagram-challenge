@@ -4,6 +4,7 @@
   <% if @photos.any? %>
     <% @photos.all.reverse.each do |photo| %>
       <%= image_tag photo.image.url, {:width => "500", :height => "500"} %><br>
+      <p><%= pluralize photo.likes.count, 'like' %></p>
       <%= photo.caption %><br>
 
         <% if photo.comments.any? %>

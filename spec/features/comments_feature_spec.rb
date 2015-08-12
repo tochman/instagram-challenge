@@ -6,7 +6,7 @@ include Helpers
 feature 'commenting' do
   before {Photo.create}
 
-  scenario 'leaving a comment' do
+  scenario 'can leave a comment' do
     visit('/')
     click_link 'leave comment'
     fill_in 'Remark', with: "nice pic"
