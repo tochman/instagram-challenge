@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
 
-  def review_params
+  def comment_params
     params.require(:comment).permit(:remark)
   end
 
@@ -16,5 +16,15 @@ class CommentsController < ApplicationController
       render 'new'
     end
   end
+
+    def create
+      @photo = Photo.find(params[:photo_id])
+      @comment = @photo.comments.new(comment_params)
+      if @comment.save
+        redirect_to '/'
+      else
+        render 'new'
+      end
+    end
 
 end
