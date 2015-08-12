@@ -5,24 +5,17 @@ include Helpers
 
 feature 'photos' do
   context 'no photos have been added' do
-      before do
-        sign_up
-      end
-
     scenario 'should show an upload button' do
+      sign_up
       expect(page).to have_content 'no photos!'
       expect(page).to have_button 'Upload a photo'
     end
   end
 
   context 'creating photos when signed in' do
-
-    before do
+    scenario 'gives user a form to add photo, displays caption' do
       sign_up
       post_photo
-    end
-
-    scenario 'gives user a form to add photo, displays caption' do
       expect(current_path).to eq '/photos'
       expect(page).to have_content 'a lion'
       expect(page).to have_selector 'img'

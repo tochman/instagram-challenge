@@ -7,15 +7,11 @@ feature 'commenting' do
   before {Photo.create}
 
   scenario 'leaving a comment' do
-
     visit('/')
     click_link 'leave comment'
     fill_in 'Remark', with: "nice pic"
     click_button 'post comment'
-
     expect(current_path).to eq '/'
     expect(page).to have_content('nice pic')
-
   end
-
 end
