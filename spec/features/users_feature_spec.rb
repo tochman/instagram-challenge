@@ -1,5 +1,8 @@
 require 'rails_helper'
 
+require_relative 'helpers.rb'
+include Helpers
+
 feature "user can sign in and sign out" do
   context "user not signed in and on the homepage" do
     it "should see 'sign in' and 'sign up' buttons" do
@@ -16,12 +19,7 @@ feature "user can sign in and sign out" do
 
   context "user signed in on the homepage" do
     before do
-      visit('/')
-      click_link('Sign up')
-      fill_in('Email', with: 'test@test.es')
-      fill_in('Password', with: 'pAssw0rd')
-      fill_in('Password confirmation', with: 'pAssw0rd')
-      click_button('Sign up')
+      sign_up
     end
 
     it "should see 'sign out' link" do

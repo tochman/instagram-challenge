@@ -1,9 +1,12 @@
 require 'rails_helper'
 
+require_relative 'helpers.rb'
+include Helpers
+
 feature 'commenting' do
   before {Photo.create}
 
-  scenario 'allows user to leave comment' do
+  scenario 'leaving a comment' do
 
     visit('/')
     click_link 'leave comment'
