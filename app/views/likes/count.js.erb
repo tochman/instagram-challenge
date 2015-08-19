@@ -1,0 +1,5 @@
+if ($('<% "#photo-#{@photo.id}" %>').length) {
+    $('<% "#photo-#{@photo.id}" %>').html('testing');
+} else {
+    $('<% "#photo-#{@photo.id}" %>').html('(<%= pluralize @photo.likes.count, 'like' %>)');
+}

@@ -11,7 +11,9 @@ feature 'liking photos' do
 
   scenario 'a user can like a photo and update the likes count', js: true do
     visit '/'
-    click_link 'like'
+    byebug
+    click_link 'Like'
+    byebug
     expect(page).to have_content('1 like')
   end
 end
